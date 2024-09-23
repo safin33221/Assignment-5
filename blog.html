@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- tailwind css link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/1f87d08519.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css" type="text/css">
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#B4F461',
+                        secondary: '#111111',
+                        success: 'rgba(17, 17, 17, 0.6)',
+                        background1: 'rgb(249, 247, 243);',
+                        background2: 'rgba(17, 17, 17, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <section class="sticky top-0">
+        <div class=" bg-background1 sticky">
+            <div class="flex justify-between w-11/12 mx-auto pt-4 pb-8 ">
+                <div>
+                    <button id="home-section" class=" btn bg-primary rounded-lg text-lg">Home</button>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="./assets/logo.png" alt="" class="border border-secondary border-dashed">
+                    <h1 class="text-xl font-bold text-secondary"> Donate Bangladesh</h1>
+                </div>
+                <div class="flex items-center">
+                    <div>
+
+                        <img src="./assets/coin.png" alt="">
+                    </div>
+                    <h2 class="text-success font-semibold">
+                        <span id="current-balance">5500</span>BTD
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="w-11/12 mx-auto">
+        <div>
+            <h1 class="text-2xl my-3 font-bold text-secondary">Important FQA <i class="fa-thin fa-comment-question text-3xl"></i></h1>
+        </div>
+        <div>
+            <div class="join join-vertical w-full">
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" checked="checked" />
+                    <div class="collapse-title text-xl font-semibold">What is Document Object Model(DOM)?</div>
+                    <div class="collapse-content">
+                        <p class="text-success text-lg">The Document Object Model (DOM) is a programming interface for web documents. It represents
+                            the structure of a web page as a tree of objects that can be manipulated using programming
+                            languages like JavaScript.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl  font-semibold">How do you select an element from the DOM?</div>
+                    <div class="collapse-content">
+                        <p class="text-success text-lg">
+                            To select an element from the DOM, you can use methods like document.getElementById("id") for selecting by ID, document.getElementsByClassName("class") for selecting by class name, or document.querySelector("selector") for more complex queries. These methods return the corresponding element(s), allowing you to manipulate them using JavaScript.
+                        </p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-semibold">What is the event delegation in the context of the
+                        DOM, and why is it useful?</div>
+                    <div class="collapse-content">
+                        <p class="text-success text-lg">
+                            Event delegation is a technique in JavaScript where a single event listener is added to a
+                            parent element to manage events triggered by its child elements. Instead of adding
+                            individual event listeners to each child element, the parent listens for events and handles
+                            them for all child elements that match the specified criteria.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title text-xl font-semibold">How do you mainpulate an element's attributes and style
+                    the DOM?</div>
+                <div class="collapse-content">
+                    <p class="text-success text-lg">To manipulate an element's attributes and styles in the DOM, JavaScript
+                        provides methods like
+                        getAttribute(), setAttribute(), and removeAttribute() to update element attributes. You can also
+                        modify styles using the style property, such as element.style.color = 'blue', to change the
+                        appearance. These techniques make it easy to create dynamic and interactive webpages by altering
+                        content and styles based on user actions or data changes.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+    <script src="./js/home.js"></script>
+</body>
+
+</html>
