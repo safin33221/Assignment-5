@@ -4,7 +4,7 @@ document.getElementById('donate-btn').addEventListener('click', function (event)
     let availableBalance = getTextFildById('donate-balance')
     let currentBalance = getTextFildById('current-balance');
 
-    if (isNaN(donateAmount) || donateAmount <= 0) {
+    if (isNaN(donateAmount) || donateAmount <= 0 || donateAmount > currentBalance) {
         alert("invalid Donation Amount");
     }
     else {
@@ -31,12 +31,13 @@ document.getElementById('donate-btn').addEventListener('click', function (event)
 document.getElementById('donate-btn2').addEventListener('click', function (event) {
     event.preventDefault()
     const donateAmount = getInputFildById('donate-amount2');
-    if (isNaN(donateAmount) || donateAmount <= 0) {
+    let availableBalance = getTextFildById('donate-balance2')
+    let currentBalance = getTextFildById('current-balance');
+
+    if (isNaN(donateAmount) || donateAmount <= 0 || donateAmount > currentBalance) {
         alert("invalid donation Amount");
     } else {
 
-        let availableBalance = getTextFildById('donate-balance2')
-        let currentBalance = getTextFildById('current-balance');
         document.getElementById('donate-balance2').innerText = availableBalance + donateAmount;
         document.getElementById('current-balance').innerText = currentBalance - donateAmount;
 
@@ -58,12 +59,12 @@ document.getElementById('donate-btn2').addEventListener('click', function (event
 document.getElementById('donate-btn3').addEventListener('click', function (event) {
     event.preventDefault()
     const donateAmount = getInputFildById('donate-amount3');
-    if (isNaN(donateAmount) || donateAmount <= 0) {
+    let availableBalance = getTextFildById('donate-balance3')
+    let currentBalance = getTextFildById('current-balance');
+    if (isNaN(donateAmount) || donateAmount <= 0 || donateAmount > currentBalance) {
         alert("invalid donation Amount");
     } else {
 
-        let availableBalance = getTextFildById('donate-balance3')
-        let currentBalance = getTextFildById('current-balance');
         document.getElementById('donate-balance3').innerText = availableBalance + donateAmount;
         document.getElementById('current-balance').innerText = currentBalance - donateAmount;
 
